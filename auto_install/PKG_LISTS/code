@@ -1,0 +1,6 @@
+git gitk
+python3 python3-tk
+gcc g++
+make scons cmake
+geany geany-plugins
+codeblocks
