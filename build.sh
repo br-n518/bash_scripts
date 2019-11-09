@@ -151,7 +151,7 @@ REQ_DIR_RENAME_FILE_SUFFIX=".bak"
 
 #######################
 # If CHECK_DIRS isn't empty or a zero, then assure_dirs.
-if [ ! -z "$CHECK_DIRS" -a "$CHECK_DIRS" != "0" -a ! -z "$REQUIRED_DIRS" ]
+if [ ! -z "$REQUIRED_DIRS" ]
 then
 	assure_dirs $REQUIRED_DIRS
 fi
