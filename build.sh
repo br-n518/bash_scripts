@@ -133,8 +133,17 @@ REQ_DIR_RENAME_FILE_SUFFIX=".bak"
 						# if match
 						if [ "$t" == "$targ" ]
 						then
+							TARG_COMMAND="${TARGETS_ACTION[$tidx]}"
+							# output target name
+							if [ ${#TARG_COMMAND} -ge 11 -a "${TARG_COMMAND:0:11}" == "run_targets" ]
+							then
+								echo "BEGIN \"$t\": ${TARG_COMMAND:11}"
+							else
+								echo "BEGIN TARGET: \"$t\""
+							fi
 							# run command
-							${TARGETS_ACTION[$tidx]}
+							$TARG_COMMAND
+							# break for next function arg
 							break
 						fi
 						# increment
@@ -202,7 +211,6 @@ then
 			echo -e "  * $t"
 		done
 		echo
-		echo "Done."
 		exit 0
 		
 	fi
@@ -216,7 +224,7 @@ fi
 #####     RUN     #####
 #######################
 
-echo "$0 $TARGET"
+echo "BUILD: $0 $TARGET"
 run_targets $TARGET
-echo "Done."
+echo "DONE"
 
