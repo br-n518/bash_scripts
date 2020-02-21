@@ -67,7 +67,7 @@ echo -e "\n\n"
 echo "CATEGORIES (basic list, choose one or separate with semi-colon):"
 echo
 echo "*  Accessories, Development, Education,"
-echo "*  Games, Graphics, Internet,"
+echo "*  Game, Graphics, Internet,"
 echo "*  Multimedia, Office, System."
 echo
 subject=Categories

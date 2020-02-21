@@ -1,6 +1,10 @@
 git gitk
-python3 python3-tk
+python3
 gcc g++
-make scons cmake
+gprolog gfortran
+make cmake scons gradle
 geany geany-plugins
 codeblocks
+eclipse eclipse-changelog eclipse-egit 
+eclipse-pydev 
+eclipse-cdt eclipse-cdt-pkg-config  eclipse-cdt-valgrind
