@@ -15,7 +15,7 @@ fi
 pushd osu
 
 git pull
-dotnet publish osu.Desktop -r linux-x64 -c Release
+dotnet publish osu.Desktop
 
 popd
 
